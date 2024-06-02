@@ -1,3 +1,4 @@
+<script src="/js/sweetalert2.min.js"></script>
 <?php
 	/*== Almacenando datos ==*/
     $product_id_del=limpiar_cadena($_GET['product_id_del']);
@@ -21,7 +22,6 @@
     			chmod("./img/producto/".$datos['producto_foto'], 0777);
 				unlink("./img/producto/".$datos['producto_foto']);
     		}
-
 	        echo '
 	            <div class="notification is-info is-light">
 	                <strong>¡PRODUCTO ELIMINADO!</strong><br>
