@@ -1,47 +1,46 @@
-<div class="container is-fluid mb-6">
-    <h1 class="title">Categorías</h1>
-    <h2 class="subtitle">Buscar categoría</h2>
-</div>
+<div class="container pb-6 pt-6" style="width: 90%;">
+    <div class="container is-fluid mb-6">
+        <h2 class="title">Buscar categoría</h2>
+        <br>
+        <?php
+            require_once "./php/main.php";
 
-<div class="container pb-6 pt-6">
-    <?php
-        require_once "./php/main.php";
+            if(isset($_POST['modulo_buscador'])){
+                require_once "./php/buscador.php";
+            }
 
-        if(isset($_POST['modulo_buscador'])){
-            require_once "./php/buscador.php";
-        }
-
-        if(!isset($_SESSION['busqueda_categoria']) && empty($_SESSION['busqueda_categoria'])){
-    ?>
-    <div class="columns">
-        <div class="column">
-            <form action="" method="POST" autocomplete="off" >
-                <input type="hidden" name="modulo_buscador" value="categoria">
-                <div class="field is-grouped">
-                    <p class="control is-expanded">
-                        <input class="input is-rounded" type="text" name="txt_buscador" placeholder="¿Qué estas buscando?" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,30}" maxlength="30" >
-                    </p>
-                    <p class="control">
-                        <button class="button is-info" type="submit" >Buscar</button>
-                    </p>
-                </div>
-            </form>
+            if(!isset($_SESSION['busqueda_categoria']) && empty($_SESSION['busqueda_categoria'])){
+        ?>
+        <div class="container is-fluid mb-6" style="width: 90%;">
+        <div class="columns">
+            <div class="column">
+                <form action="" method="POST" autocomplete="off" >
+                    <input type="hidden" name="modulo_buscador" value="categoria">
+                    <div class="field is-grouped">
+                        <p class="control is-expanded">
+                            <input class="input is-rounded" type="text" name="txt_buscador" placeholder="¿Qué estas buscando?" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,30}" maxlength="30" >
+                        </p>
+                        <p class="control">
+                            <button class="button is-info" type="submit" >Buscar</button>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <?php }else{ ?>
-    <div class="columns">
-        <div class="column">
-            <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off" >
-                <input type="hidden" name="modulo_buscador" value="categoria"> 
-                <input type="hidden" name="eliminar_buscador" value="categoria">
-                <p>Estas buscando <strong>“<?php echo $_SESSION['busqueda_categoria']; ?>”</strong></p>
-                <br>
-                <button type="submit" class="button is-danger is-rounded">Eliminar busqueda</button>
-            </form>
+        <?php }else{ ?>
+        <div class="columns">
+            <div class="column">
+                <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off" >
+                    <input type="hidden" name="modulo_buscador" value="categoria"> 
+                    <input type="hidden" name="eliminar_buscador" value="categoria">
+                    <p>Estas buscando <strong>“<?php echo $_SESSION['busqueda_categoria']; ?>”</strong></p>
+                    <br>
+                    <button type="submit" class="button is-danger is-rounded">Eliminar busqueda</button>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <?php
+        <?php
             # Eliminar categoria #
             if(isset($_GET['category_id_del'])){
                 require_once "./php/categoria_eliminar.php";
@@ -63,6 +62,7 @@
 
             # Paginador categoria #
             require_once "./php/categoria_lista.php";
-        } 
-    ?>
+            } 
+        ?>
+    </div>
 </div>

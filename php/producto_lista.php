@@ -53,17 +53,28 @@
 			            <div class="content">
 			              <p>
 			                <strong>'.$contador.' - '.$rows['producto_nombre'].'</strong><br>
-			                <strong>CODIGO:</strong> '.$rows['producto_codigo'].', <strong>PRECIO:</strong> $'.$rows['producto_precio'].', <strong>STOCK:</strong> '.$rows['producto_stock'].', <strong>CATEGORIA:</strong> '.$rows['categoria_nombre'].', <strong>REGISTRADO POR:</strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
+			                <strong>Código Producto : </strong> '.$rows['producto_codigo'].', <strong>Precio : </strong> $'.$rows['producto_precio'].', <strong>Stock : </strong> '.$rows['producto_stock'].', <strong>Categoria : </strong> '.$rows['categoria_nombre'].', <strong>Registrado por: </strong> '.$rows['usuario_nombre'].' '.$rows['usuario_apellido'].'
 			              </p>
 			            </div>
 			            <div class="has-text-right">
-			                <a href="index.php?vista=product_img&product_id_up='.$rows['producto_id'].'" class="button is-link is-rounded is-small">Imagen</a>
-			                <a href="index.php?vista=product_update&product_id_up='.$rows['producto_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
-			                <a href="'.$url.$pagina.'&product_id_del='.$rows['producto_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
+			                <a href="index.php?vista=product_img&product_id_up='.$rows['producto_id'].'" class="button is-link is-small">
+								<span class="icon">
+									<i class="fas fa-2x fa-image"></i>
+								</span>
+							</a>
+			                <a href="index.php?vista=product_update&product_id_up='.$rows['producto_id'].'" class="button is-success is-rounded is-small">
+								<span class="icon">
+									<i class="fas fa-lg fa-pen"></i>
+								</span>
+							</a>
+			                <a href="'.$url.$pagina.'&product_id_del='.$rows['producto_id'].'" class="button is-danger is-rounded is-small">
+								<span class="icon">
+									<i class="fas fa-lg fa-trash-alt"></i>
+								</span>
+							</a>
 			            </div>
 			        </div>
 			    </article>
-
 			    <hr>
             ';
             $contador++;

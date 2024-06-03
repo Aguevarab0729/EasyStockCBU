@@ -19,30 +19,19 @@
                 <a class="navbar-link">Usuarios</a>
 
                 <div class="navbar-dropdown">
-                    <a href="index.php?vista=user_new" class="navbar-item">Nuevo</a>
                     <a href="index.php?vista=user_list" class="navbar-item">Lista</a>
                     <a href="index.php?vista=user_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Categorías</a>
-
+                <a class="navbar-link">Inventario</a>
                 <div class="navbar-dropdown">
-                    <a href="index.php?vista=category_new" class="navbar-item">Nueva</a>
-                    <a href="index.php?vista=category_list" class="navbar-item">Lista</a>
-                    <a href="index.php?vista=category_search" class="navbar-item">Buscar</a>
-                </div>
-            </div>
-
-            <div class="navbar-item is-hoverable">
-                <a class="navbar-link">Productos</a>
-
-                <div class="navbar-dropdown">
-                    <a href="index.php?vista=product_new" class="navbar-item">Nuevo</a>
-                    <a href="index.php?vista=product_list" class="navbar-item">Lista</a>
-                    <a href="index.php?vista=product_category" class="navbar-item">Por categoría</a>
-                    <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
+                    <a href="index.php?vista=category_list" class="navbar-item">Categorias</a>
+                    <!-- <a href="index.php?vista=category_search" class="navbar-item">Buscar por categoria</a> -->
+                    <a href="index.php?vista=product_list" class="navbar-item">Productos</a>
+                    <a href="index.php?vista=product_category" class="navbar-item">Productos por categoría</a>
+                    <!-- <a href="index.php?vista=product_search" class="navbar-item">Buscar productos</a> -->
                 </div>
             </div>
 
@@ -51,7 +40,7 @@
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
-                    ** <?php echo $_SESSION['usuario']; ?> **
+                    <?php echo $_SESSION['usuario']; ?>
                 </a>
                 <div class="navbar-dropdown is-boxed">
                     <a class="navbar-item" href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>">
