@@ -14,16 +14,10 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start is-active">
-
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Usuarios</a>
-
-                <div class="navbar-dropdown">
-                    <a href="index.php?vista=user_list" class="navbar-item">Lista</a>
-                    <a href="index.php?vista=user_search" class="navbar-item">Buscar</a>
-                </div>
+                <a href="index.php?vista=user_list" class="navbar-link is-arrowless">Usuarios</a>
             </div>
-
+            
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Inventario</a>
                 <div class="navbar-dropdown">
@@ -31,6 +25,7 @@
                     <!-- <a href="index.php?vista=category_search" class="navbar-item">Buscar por categoria</a> -->
                     <a href="index.php?vista=product_list" class="navbar-item">Productos</a>
                     <a href="index.php?vista=product_category" class="navbar-item">Productos por categoría</a>
+                    <a href="index.php?vista=consumer_new" class="navbar-item">Consumo</a>
                     <!-- <a href="index.php?vista=product_search" class="navbar-item">Buscar productos</a> -->
                 </div>
             </div>

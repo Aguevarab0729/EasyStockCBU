@@ -16,7 +16,7 @@
 
 	<header class="header full-box">
 		<div class="header-brand text-center full-box">
-			<a href="index.html">
+			<a href="index.php?vista=login">
 				<img src="./assets/img/negroLogo.svg" alt="logo" class="img-fluid">
 			</a>
 		</div>
@@ -25,28 +25,37 @@
 			<nav class="header-navbar full-box poppins-regular font-weight-bold">
 				<ul class="list-unstyled full-box">
 					<li>
-						<a href="index.html">Inicio<span class="full-box"></span></a>
+						<a href="#!">Registrese<span class="full-box"></span></a>
 					</li>
 				</ul>
 			</nav>
 
-			<div class="header-button full-box text-center btn-login-menu">
-				<i class="fas fa-user-alt" onclick="show_popup_login()" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Login"></i>
-
+			<div class="header-button full-box text-center btn-login-menu" style="width: 15%;">
+			<span>
+				<i class="fas fa-user-alt" onclick="show_popup_login()" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Login"><i class="poppins-regular" style="font-style: normal"> Inicio sesión</i></i>
+			</span> 
 				<div class="div-bordered popup-login">
-					<span class="text-center poppins-regular font-weight-bold">Inicio de sesión</span>
+					<span class="text-center poppins-regular font-weight-bold">Datos usuario</span>
 					<form class="full-box login" action="" method="POST" autocomplete="off">
-						<div class="form-outline mb-4">
+						<div class="form-outline mb-3">
 							<input class="form-control" type="text" name="login_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" placeholder="Usuario" required>
 						</div>
 
-						<div class="form-outline mb-4">
+						<div class="form-outline mb-3">
 							<input class="form-control" type="password" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" placeholder="Contraseña" required>
-						</div>
+						</div> <div class="row mb-4">
 
-						<p class="text-center">
-							<button class="btn btn-info btn-sm w-100" type="submit">Iniciar sesion</button>
-						</p>
+						<div class="form-outline">
+							<input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+							<label class="form-check-label" for="form1Example3"> Recuerdame </label>
+						</div>
+						<div>
+							<a href="#!">Olvido su contraseña?</a>
+							<button class="btn btn-success btn-sm w-100" type="submit">Iniciar sesion</button>
+						</div>
+						
+							
+						
 
 						<?php
 						if (isset($_POST['login_usuario']) && isset($_POST['login_clave'])) {
@@ -218,7 +227,7 @@
 		</div>
 	</footer>
 	<script src="./js/mdb.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="./js/main.js"></script>
-</body>
-
+	</body>
 </html>

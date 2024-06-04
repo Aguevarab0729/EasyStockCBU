@@ -14,6 +14,12 @@
                     <span>Nuevo usuario</span>
                 </span>
                 </a>
+                <a href="index.php?vista=user_search" class="button is-link is-inverted" style="float: right;">
+                    <span class="icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span> Buscar </span>
+                </a>
             </div>
         </div>
         <br>
