@@ -7,68 +7,15 @@
 	<title>Easy Stock</title>
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/mdb.min.css">
-	<link rel="stylesheet" href="./css/all.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-
-	<header class="header full-box">
-		<div class="header-brand text-center full-box">
-			<a href="index.php?vista=login">
-				<img src="./assets/img/negroLogo.svg" alt="logo" class="img-fluid">
-			</a>
-		</div>
-
-		<div class="header-options full-box">
-			<nav class="header-navbar full-box poppins-regular font-weight-bold">
-				<ul class="list-unstyled full-box">
-					<li>
-						<a href="#!">Registrese<span class="full-box"></span></a>
-					</li>
-				</ul>
-			</nav>
-
-			<div class="header-button full-box text-center btn-login-menu" style="width: 15%;">
-			<span>
-				<i class="fas fa-user-alt" onclick="show_popup_login()" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Login"><i class="poppins-regular" style="font-style: normal"> Inicio sesión</i></i>
-			</span> 
-				<div class="div-bordered popup-login">
-					<span class="text-center poppins-regular font-weight-bold">Datos usuario</span>
-					<form class="full-box login" action="" method="POST" autocomplete="off">
-						<div class="form-outline mb-3">
-							<input class="form-control" type="text" name="login_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" placeholder="Usuario" required>
-						</div>
-
-						<div class="form-outline mb-3">
-							<input class="form-control" type="password" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" placeholder="Contraseña" required>
-						</div> <div class="row mb-4">
-
-						<div class="form-outline">
-							<input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-							<label class="form-check-label" for="form1Example3"> Recuerdame </label>
-						</div>
-						<div>
-							<a href="#!">Olvido su contraseña?</a>
-							<button class="btn btn-success btn-sm w-100" type="submit">Iniciar sesion</button>
-						</div>
-						
-							
-						
-
-						<?php
-						if (isset($_POST['login_usuario']) && isset($_POST['login_clave'])) {
-							require_once "./php/main.php";
-							require_once "./php/iniciar_sesion.php";
-						}
-						?>
-					</form>
-				</div>
-			</div>
-		</div>
-	</header>
-
+	<?php
+		include "./inc/navbar_start.php";
+	?>
 
 	<!-- Contenido -->
 	<div class="banner">

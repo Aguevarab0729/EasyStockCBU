@@ -22,11 +22,9 @@
                 <a class="navbar-link">Inventario</a>
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=category_list" class="navbar-item">Categorias</a>
-                    <!-- <a href="index.php?vista=category_search" class="navbar-item">Buscar por categoria</a> -->
                     <a href="index.php?vista=product_list" class="navbar-item">Productos</a>
                     <a href="index.php?vista=product_category" class="navbar-item">Productos por categoría</a>
                     <a href="index.php?vista=consumer_new" class="navbar-item">Consumo</a>
-                    <!-- <a href="index.php?vista=product_search" class="navbar-item">Buscar productos</a> -->
                 </div>
             </div>
 
