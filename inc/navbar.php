@@ -1,4 +1,4 @@
-<nav class="navbar is-spaced is-warning" role="navigation" aria-label="main navigation">
+<nav class="navbar is-spaced is-light" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand">
         <a class="navbar-item" href="index.php?vista=home">
@@ -27,9 +27,7 @@
                     <a href="index.php?vista=consumer_new" class="navbar-item">Consumo</a>
                 </div>
             </div>
-
         </div>
-
         <div class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">

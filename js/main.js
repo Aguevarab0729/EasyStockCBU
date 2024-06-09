@@ -1,22 +1,7 @@
-/* mostrar o ocultar el formulario de contacto */
-document.getElementById('mostrarFormulario').addEventListener('click', function() {
-	var formularioContainer = document.getElementById('formularioContainer');
-	var mostrarFormularioButton = document.getElementById('mostrarFormulario');
-
-	formularioContainer.classList.remove('hidden');
-	mostrarFormularioButton.style.display = 'none';
-});
-
-
-document.getElementById("formulario").addEventListener("submit", function (event) {
-	// Prevenir que el formulario se envíe normalmente
-	event.preventDefault();
-
-	document.getElementById("formularioContainer").style.display = "none";
-});
+/* Inicio de sesion modal y ver contraseña */
 
 document.addEventListener('DOMContentLoaded', () => {
-	// Functions to open and close a modal
+	// Functions abrir y cerrar el modal
 	function openModal($el) {
 	  $el.classList.add('is-active');
 	}
@@ -56,4 +41,56 @@ document.addEventListener('DOMContentLoaded', () => {
 		closeAllModals();
 	  }
 	});
+});
+
+// ver contraseña login
+document.getElementById("showPasswordBtn").addEventListener("click", function() {
+	var passwordInput = document.querySelector("input[name='login_clave']");
+	if (passwordInput.type === "password") {
+		passwordInput.type = "text";
+	} else {
+		passwordInput.type = "password";
+	}
+});
+
+
+/* mostrar o ocultar el formulario de contacto */
+document.getElementById('mostrarFormulario').addEventListener('click', function() {
+	var formularioContainer = document.getElementById('formularioContainer');
+	var mostrarFormularioButton = document.getElementById('mostrarFormulario');
+
+	formularioContainer.classList.remove('hidden');
+	mostrarFormularioButton.style.display = 'none';
+});
+
+
+document.getElementById("formulario").addEventListener("submit", function (event) {
+	// Prevenir que el formulario se envíe normalmente
+	event.preventDefault();
+
+	document.getElementById("formularioContainer").style.display = "none";
+});
+
+
+// Navbar burger
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Get all "navbar-burger" elements
+	const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+	// Add a click event on each of them
+	$navbarBurgers.forEach( el => {
+	  el.addEventListener('click', () => {
+  
+		// Get the target from the "data-target" attribute
+		const target = el.dataset.target;
+		const $target = document.getElementById(target);
+  
+		// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+		el.classList.toggle('is-active');
+		$target.classList.toggle('is-active');
+  
+	  });
+	});
+  
   });
