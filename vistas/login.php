@@ -17,8 +17,8 @@
 
 	<section class="hero is-medium banner">
 		<div class="hero-body banner-body">
-			<p class="title text-uppercase bienvenida">Bienvenido a Easy Stock</p>
-			<p class="bienvenida2 has-text-centered is-family-sans-serif">El mejor sistema de administración para restaurantes</p>
+			<p class="title is-uppercase bienvenida">Bienvenido a Easy Stock</p>
+			<p class="bienvenida2 has-text-centered is-uppercase is-family-sans-serif">El mejor sistema de administración para restaurantes</p>
 			<!-- <a href="menu.html" class="btn btn-warning"><i class="fas fa-hamburger fa-fw"></i> &nbsp; Ir al menu</a> -->
 		</div>
 	</section>
@@ -77,7 +77,7 @@
 						<br>
 						<h5 class="has-text-centered is-uppercase has-text-weight-bold">Informes y organización</h5>
 						<br>
-						<p class="has-text-centered">Organiza los inventarios de acuerdo a tus necesidades</p>
+						<p class="has-text-centered has-text-primary-00">Organiza los inventarios de acuerdo a tus necesidades</p>
 					</div>
 				</div>
 				<div class="column">
@@ -104,19 +104,21 @@
 
 	<hr>
 
-	<div class="container is-max-desktop">
+	<div class="container is-max-desktop is-family-sans-serif">
 		<section class="section">
 		<div class="columns">
 			<div class="column">
 				<figure class="full-box2">
 					<img src="./assets/img/registration.png" alt="registration" class="img-fluid">
 				</figure>
-				<h3 class="has-text-centered is-uppercase">Crea tu cuenta</h3>
+				<h3 class="has-text-centered is-uppercase has-text-weight-bold">Crea tu cuenta</h3>
+				<br>
 				<p class="has-text-centered">
 					Si deseas crear una cuenta y probar la aplicación, es muy fácil y rápido.
 				</p>
+				<br>
 				<p class="has-text-centered">
-					<button class="btn btn-primary" id="mostrarFormulario">Contáctanos</button>
+					<button class="button btn-primary" id="mostrarFormulario">Contáctanos</button>
 				</p>
 
 
@@ -163,7 +165,7 @@
 		</section>
 	</div>
 	
-	<footer class="footer">
+	<footer class="footer is-family-sans-serif">
 		<div class="content has-text-centered">
 			<p>
 				<strong><i class="far fa-copyright"></i>2023 EasyStock</strong> by <a href="https://github.com/Aguevarab0729">AnyeDeveloper</a>.
