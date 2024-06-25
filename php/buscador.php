@@ -23,7 +23,8 @@
 
 			if($txt==""){
 				echo '
-		            <div class="notification is-danger is-light">
+		            <div class="notification is-danger">
+						<button class="delete"></button>
 		                <strong>¡Ocurrio un error inesperado!</strong><br>
 		                Introduce el termino de busqueda
 		            </div>
@@ -31,8 +32,9 @@
 			}else{
 				if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,30}",$txt)){
 			        echo '
-			            <div class="notification is-danger is-light">
-			                <strong>¡Ocurrio un error inesperado!</strong><br>
+						<div class="notification">
+							<button class="delete"></button>
+							<strong>¡Ocurrio un error inesperado!</strong><br>
 			                El termino de busqueda no coincide con el formato solicitado
 			            </div>
 			        ';
@@ -54,7 +56,8 @@
 
 	}else{
 		echo '
-            <div class="notification is-danger is-light">
+            <div class="notification is-danger">
+				<button class="delete"></button>
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No podemos procesar la peticion
             </div>

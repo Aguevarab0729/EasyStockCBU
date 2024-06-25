@@ -10,6 +10,7 @@
     if($nombre==""){
         echo '
             <div class="notification is-danger is-light">
+                <button class="delete"></button>
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No has llenado todos los campos que son obligatorios
             </div>
@@ -22,6 +23,7 @@
     if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}",$nombre)){
         echo '
             <div class="notification is-danger is-light">
+                <button class="delete"></button>
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El NOMBRE no coincide con el formato solicitado
             </div>
@@ -33,6 +35,7 @@
     	if(verificar_datos("[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}",$ubicacion)){
 	        echo '
 	            <div class="notification is-danger is-light">
+                    <button class="delete"></button>
 	                <strong>¡Ocurrio un error inesperado!</strong><br>
 	                La UBICACION no coincide con el formato solicitado
 	            </div>
@@ -48,6 +51,7 @@
     if($check_nombre->rowCount()>0){
         echo '
             <div class="notification is-danger is-light">
+                <button class="delete"></button>
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 El NOMBRE ingresado ya se encuentra registrado, por favor elija otro
             </div>
@@ -71,6 +75,7 @@
     if($guardar_categoria->rowCount()==1){
         echo '
             <div class="notification is-info is-light">
+                <button class="delete"></button>
                 <strong>¡CATEGORIA REGISTRADA!</strong><br>
                 La categoría se registro con exito
             </div>
@@ -78,6 +83,7 @@
     }else{
         echo '
             <div class="notification is-danger is-light">
+                <button class="delete"></button>
                 <strong>¡Ocurrio un error inesperado!</strong><br>
                 No se pudo registrar la categoría, por favor intente nuevamente
             </div>

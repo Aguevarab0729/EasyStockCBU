@@ -44,19 +44,3 @@
         </div>
     </div>
 </nav>
-
-					
-<!-- Cerrar sesion --
-<div class="text-center full-box">
-    <i class="fas fa-user-circle fa-4x"></i>
-</div>
-<span class="poppins-regular font-weight-bold">Nombre de usuario</span>
-<div class="text-center full-box">
-    <a href="#" class="btn btn-info btn-sm w-100"><i class="fas fa-user-cog fa-fw"></i> &nbsp; Mi cuenta</a>
-</div>
-<div class="text-center full-box">
-    <a href="#" class="btn btn-info btn-sm w-100"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
-</div>
-<form class="full-box" action="">
-    <button class="btn btn-raised btn-primary btn-sm w-100" ><i class="fas fa-door-open fa-fw"></i> &nbsp; Cerrar sesión</button>
-</form>-->

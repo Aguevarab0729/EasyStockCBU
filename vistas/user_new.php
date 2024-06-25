@@ -46,6 +46,18 @@
 						</div>
 					</div>
 				</div>
+				<p>
+					<div class="notification is-info is-light">
+						( * )  Este formulario permite: 
+						<br>
+						Nombres y apellidos: Cualquier combinación de letras (incluyendo acentos y ñ) y espacios en blanco 
+						<br>
+						Usuario: Cualquier combinación de letras (mayúsculas y minúsculas) y dígitos, con una longitud de entre 4 y 20 caracteres 
+						<br>
+						contraseña:	Cualquier combinación de letras (mayúsculas y minúsculas), números y los caracteres especiales $, @, . y -
+		            </div>
+				</p>
+				<br>
 				<p class="has-text-centered">
 					<button type="submit" class="button is-success">Guardar</button>
 				</p>

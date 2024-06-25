@@ -110,3 +110,25 @@
 		$tabla.='</nav>';
 		return $tabla;
 	}
+
+	# Funcion obtener productos #
+	function obtener_productos() {
+		$conexion = conexion();
+		$consulta_datos = "SELECT producto_id, producto_nombre FROM producto ORDER BY producto_nombre ASC";
+		$stmt = $conexion->query($consulta_datos);
+		return $stmt->fetchAll();
+	}
+
+	# Funcion registrar_movimientos #
+	function registrar_movimiento($producto_id, $cantidad, $tipo_movimiento) {
+		$conexion = conexion();
+		if ($tipo_movimiento === 'Ingreso') {
+			$consulta = "UPDATE producto SET producto_stock = producto_stock + :cantidad WHERE producto_id = :producto_id";
+		} else {
+			$consulta = "UPDATE producto SET producto_stock = producto_stock - :cantidad WHERE producto_id = :producto_id";
+		}
+		$stmt = $conexion->prepare($consulta);
+		$stmt->bindParam(':cantidad', $cantidad, PDO::PARAM_INT);
+		$stmt->bindParam(':producto_id', $producto_id, PDO::PARAM_INT);
+		$stmt->execute();
+	}

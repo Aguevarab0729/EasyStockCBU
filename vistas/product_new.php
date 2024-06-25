@@ -10,13 +10,13 @@
 				<div class="columns">
 					<div class="column">
 						<div class="control">
-							<label>Código de producto : </label>
+							<label class="label">Código de producto : </label>
 							<input class="input" type="text" name="producto_codigo" pattern="[a-zA-Z0-9- ]{1,70}" maxlength="70" required >
 						</div>
 					</div>
 					<div class="column">
 						<div class="control">
-							<label>Nombre : </label>
+							<label class="label">Nombre : </label>
 							<input class="input" type="text" name="producto_nombre" placeholder="Ejemplo: Arroz Diana(Marca) 5Kg(peso)" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required>
 						</div>
 					</div>
@@ -24,21 +24,13 @@
 				<div class="columns">
 					<div class="column">
 						<div class="control">
-							<label>Precio: </label>
-							<input class="input" type="text" name="producto_precio" pattern="[0-9.]{1,25}" maxlength="25" required >
+							<label class="label">Stock : </label>
+							<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" disabled >
 						</div>
 					</div>
 					<div class="column">
-						<div class="control">
-							<label>Stock (número de unidades) : </label>
-							<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" required >
-						</div>
-					</div>
-				</div>
-				<div class="columns">
-					<div class="column">
-						<label>Categoría : </label><br>
-						<div class="select is-fullwidth">
+						<label class="label">Categoría : </label>
+						<div class="select">
 							<select name="producto_categoria" >
 								<option value="" selected="" >Seleccione una categoria : </option>
 								<?php
@@ -56,20 +48,38 @@
 						</div>
 					</div>
 					<div class="column">
-						<label>Foto o imagen del producto : </label><br>
-						<div class="file has-name is-fullwidth">
-							<label class="file-label">
-								<input class="file-input" type="file" name="producto_foto" accept=".jpg, .png, .jpeg" >
-								<span class="file-cta">
-									<span class="file-label">Imagen : </span>
-								</span>
-								<span class="file-name">JPG, JPEG, PNG. (MAX 3MB)</span>
-							</label>
+						<label class="label">Foto o imagen del producto : </label>
+						<div class="control">
+							<div class="file is-info has-name">
+								<label class="file-label">
+									<input class="file-input" type="file" name="producto_foto" accept=".jpg, .png, .jpeg">
+									<span class="file-cta">
+										<span class="file-icon">
+											<i class="fas fa-upload"></i>
+										</span>
+										<span class="file-label">Imagen:</span>
+									</span>
+									<span class="file-name">Jpg, Jpeg, Png. (Max 3MB)</span>
+								</label>
+							</div>
 						</div>
 					</div>
 				</div>
+				
+				<p>
+					<div class="notification is-info is-light">
+						( * )  Este formulario permite: 
+						<br>
+						Código de producto: cualquier combinación de letras (mayúsculas y minúsculas), números, el guion y espacios en blanco.
+						<br>
+						Nombre producto: Cualquier combinación de letras (incluyendo acentos y ñ), números, estos caracteres ().,$#\-\/ y espacios en blanco.
+						<br>
+						precio - stock:	permite cualquier combinación de dígitos y el punto decimal
+		            </div>
+				</p>
+				<br>
 				<p class="has-text-centered">
-					<button type="submit" class="button is-info">Guardar</button>
+					<button type="submit" class="button is-success">Guardar</button>
 				</p>
 			</form>
 		</div>

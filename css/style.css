@@ -12,12 +12,10 @@
 }
 
 body,html{
-	font-family: 'roboto_condensed_light';
+	/* font-family: 'roboto_condensed_light';
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */ 
 	background-color: rgba(255, 255, 255, 0.831);
-	/* rgb(245, 235, 223) */
-	color: black;
 	font-size: 18px;
 }
 
@@ -30,150 +28,6 @@ body,html{
 
 .div-bordered{
 	border: 1px solid #E1E1E1;
-}
-
-/*=========== barra de navegación (web) ===========*/
-.header,
-.header-brand,
-.header-options,
-.header-navbar,
-.header-button{
-	height: var(--header-height);
-	transition: all .3s ease-in-out;
-	box-sizing: border-box;
-}
-.header{
-	background-color: #FFF;
-	border-bottom: 1px solid rgba(0, 0, 0, .1);
-	position: relative;
-	color: var(--bs-black);
-}
-.header-brand,
-.header-options{
-	position: absolute;
-	top: 0;
-}
-.header-brand{
-	width: 25%;
-	left: 0;
-}
-.header-brand img{
-	display: inline-block;
-	margin-top: 0.2vw;
-	padding: 1vw 2vw;
-	max-height: calc(var(--header-height) - 0.2vw);
-}
-.header-options{
-	width: 75%;
-	right: 0;
-	padding-right: 20px;
-	text-align: right;
-}
-.header-navbar{
-	display: inline-block;
-	width: auto;
-	padding-top: 0;
-	margin-top: 0;
-}
-.header-navbar ul,
-.header-navbar ul li,
-.header-navbar ul li a{
-	width: auto;
-	padding-top: 0;
-	margin-top: 0;
-}
-.header-navbar ul li,
-.header-navbar ul li a,
-.header-button,
-.header-button > i{
-	display: inline-block;
-	height: var(--header-height);
-	line-height: var(--header-height);
-	transition: all .3s ease-in-out;
-	position: relative;
-}
-.header-button > i{
-	cursor: pointer;
-	width: 100%;
-}
-.header-navbar ul li a{
-	padding: 0 15px;
-}
-.header-navbar ul li a:hover,
-.header-button:hover{
-	text-decoration: none;
-	color: #7B68EE;
-}
-.header-navbar ul li a span{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-color: transparent;
-	height: 5px;
-	transition: all .3s ease-in-out;
-}
-.header-navbar ul li a:hover span{
-	background-color: MediumTurquoise;
-}
-.header-button{
-	width: calc(var(--header-height) - calc(var(--header-height) / 4));
-}
-.header-navbar ul li a,
-.header-button{
-	font-size: calc(var(--header-height) / 3.5);
-	color: var(--bs-black);
-}
-.btn-login-menu{
-	user-select: none;
-}
-.popup-login{
-	position: absolute;
-	width: 275px;
-	height: auto;
-	top: calc(var(--header-height) + 8px);
-	right: 0;
-	background-color: #fff;
-	color: var(--bs-black);
-	z-index: 99999;
-	padding: 15px 7px;
-	transition: all .3s ease-in-out;
-	opacity: 0;
-	pointer-events: none;
-}
-.popup-login:hover{
-	color: var(--bs-black);
-}
-.popup-login::after,
-.popup-login::before{
-	bottom: 100%;
-	right: 12px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-.popup-login::after{
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #fff;
-	border-width: 8px;
-	margin-right: 0px;
-}
-.popup-login::before{
-	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #ccc;
-	border-width: 9px;
-	margin-right: -1px;
-}
-.popup-login.active{
-	opacity: 1;
-	pointer-events: inherit;
-}
-.bag-count{
-	position: absolute;
-	top: calc(var(--header-height) - (var(--header-height) / 1.2));
-	right: 0;
 }
 
 /*Estilos del banner*/

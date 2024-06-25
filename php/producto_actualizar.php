@@ -27,13 +27,13 @@
     $codigo=limpiar_cadena($_POST['producto_codigo']);
 	$nombre=limpiar_cadena($_POST['producto_nombre']);
 
-	$precio=limpiar_cadena($_POST['producto_precio']);
-	$stock=limpiar_cadena($_POST['producto_stock']);
+	/* $precio=limpiar_cadena($_POST['producto_precio']);
+	$stock=limpiar_cadena($_POST['producto_stock']); */
 	$categoria=limpiar_cadena($_POST['producto_categoria']);
 
 
 	/*== Verificando campos obligatorios ==*/
-    if($codigo=="" || $nombre=="" || $precio=="" || $stock=="" || $categoria==""){
+    if($codigo=="" || $nombre=="" || $categoria==""){
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -65,17 +65,7 @@
         exit();
     }
 
-    if(verificar_datos("[0-9.]{1,25}",$precio)){
-        echo '
-            <div class="notification is-danger is-light">
-                <strong>¡Ocurrio un error inesperado!</strong><br>
-                El PRECIO no coincide con el formato solicitado
-            </div>
-        ';
-        exit();
-    }
-
-    if(verificar_datos("[0-9]{1,25}",$stock)){
+    /* if(verificar_datos("[0-9]{1,25}",$stock)){
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -83,7 +73,7 @@
             </div>
         ';
         exit();
-    }
+    } */
 
 
     /*== Verificando codigo ==*/
@@ -139,13 +129,13 @@
 
     /*== Actualizando datos ==*/
     $actualizar_producto=conexion();
-    $actualizar_producto=$actualizar_producto->prepare("UPDATE producto SET producto_codigo=:codigo,producto_nombre=:nombre,producto_precio=:precio,producto_stock=:stock,categoria_id=:categoria WHERE producto_id=:id");
+    $actualizar_producto=$actualizar_producto->prepare("UPDATE producto SET producto_codigo=:codigo,producto_nombre=:nombre,categoria_id=:categoria WHERE producto_id=:id");
 
     $marcadores=[
         ":codigo"=>$codigo,
         ":nombre"=>$nombre,
-        ":precio"=>$precio,
-        ":stock"=>$stock,
+        /* ":precio"=>$precio,
+        ":stock"=>$stock, */
         ":categoria"=>$categoria,
         ":id"=>$id
     ];

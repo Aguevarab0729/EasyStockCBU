@@ -8,19 +8,26 @@
 				<div class="columns">
 					<div class="column">
 						<div class="control">
-							<label>Nombre categoria : </label>
+							<label><strong>Nombre categoria : </strong>(4 - 50 caracteres)</label>
 							<input class="input" type="text" name="categoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required >
 						</div>
 					</div>
 					<div class="column">
 						<div class="control">
-							<label>Ubicación dentro del restaurante : </label>
+							<label><strong>Ubicación dentro del restaurante : </strong>(5 - 150 caracteres)</label>
 							<input class="input" type="text" name="categoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" >
 						</div>
 					</div>
 				</div>
+				<p>
+					<div class="notification is-info is-light">
+						( * )Este formulario permite: letras mayúsculas, minusculas, números del 1 al 9, espacios en blanco, tildes
+		            </div>
+				</p>
+	
+				<br>
 				<p class="has-text-centered">
-					<button type="submit" class="button is-info is-rounded">Guardar</button>
+					<button type="submit" class="button is-success">Guardar</button>
 				</p>
 			</form>
 		</div>

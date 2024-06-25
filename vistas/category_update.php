@@ -1,10 +1,15 @@
 <div class="container pb-6 pt-6">
+	<h2>
+		<?php
+			include "./inc/btn_back.php";
+		?>
+	</h2>
 	<div class="container is-fluid mb-6" style="width: 90%;">
 		<h1 class="title">Categorías</h1>
 		<h2 class="subtitle">Actualizar categoría</h2>
 	
 		<?php
-			include "./inc/btn_back.php";
+			/* include "./inc/btn_back.php"; */
 
 			require_once "./php/main.php";
 
@@ -39,8 +44,14 @@
 						</div>
 					</div>
 				</div>
+				<p>
+					<div class="notification is-link is-light">
+						( * )Este formulario permite: letras mayúsculas, minusculas, números del 1 al 9, espacios en blanco, tildes
+		            </div>
+				</p>	
+				<br>
 				<p class="has-text-centered">
-					<button type="submit" class="button is-success is-rounded">Guardar</button>
+					<button type="submit" class="button is-success is-rounded">Actualizar</button>
 				</p>
 			</form>
 			<?php 

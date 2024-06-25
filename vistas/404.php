@@ -1,16 +1,21 @@
-<div class="container pb-6 pt-6">
-	<div class="container is-fluid mb-6" style="width: 90%;">
-		<div class="main-container">
-			<section class="hero-body">
-				<div class="hero-body">
-					<p class="title">
-					Error 404
-					</p>
-					<p class="subtitle">
-					Pagina no encontrada
-					</p>
-				</div>
-			</section>
+<section class="hero is-fullheight is-danger">
+	<div class="hero-body">
+		<div class="container has-text-centered">
+			<img src="assets/img/negroLogo.svg" alt="">
+			<h2 class="subtitle is-3">
+				Página no encontrada
+			</h2>
+			<br>
+			<h1 class="title is-3">
+				ERROR
+			</h1>
+			<h1 class="title is-1">
+				404
+			</h1>
+			<p class="error-message">
+				Lo sentimos, la página que estás buscando no existe.
+			</p>
+			<a href="index.php?vista=home" class="button is-success mt-5">Volver al home</a>
 		</div>
 	</div>
-</div>
+</section>

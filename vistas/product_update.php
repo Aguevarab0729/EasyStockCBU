@@ -43,14 +43,8 @@
 			<div class="columns">
 				<div class="column">
 					<div class="control">
-						<label>Precio</label>
-						<input class="input" type="text" name="producto_precio" pattern="[0-9.]{1,25}" maxlength="25" required value="<?php echo $datos['producto_precio']; ?>" >
-					</div>
-				</div>
-				<div class="column">
-					<div class="control">
 						<label>Stock</label>
-						<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" required value="<?php echo $datos['producto_stock']; ?>" >
+						<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" value="<?php echo $datos['producto_stock']; ?>" disabled>
 					</div>
 				</div>
 				<div class="column">
@@ -76,8 +70,20 @@
 					</div>
 				</div>
 			</div>
+			<p>
+				<div class="notification is-info is-light">
+					( * )  Este formulario permite: 
+					<br>
+					Código de producto: cualquier combinación de letras (mayúsculas y minúsculas), números, el guion y espacios en blanco.
+					<br>
+					Nombre producto: Cualquier combinación de letras (incluyendo acentos y ñ), números, estos caracteres ().,$#\-\/ y espacios en blanco.
+					<br>
+					precio - stock:	permite cualquier combinación de dígitos y el punto decimal
+				</div>
+			</p>
+			<br>
 			<p class="has-text-centered">
-				<button type="submit" class="button is-success is-rounded">Actualizar</button>
+				<button type="submit" class="button is-success">Actualizar</button>
 			</p>
 		</form>
 		<?php 

@@ -1,10 +1,5 @@
 
 <?php
-
-// Your PHP code goes here
-
-?>
-<?php
     require_once "../inc/session_start.php";
 
     require_once "main.php";
