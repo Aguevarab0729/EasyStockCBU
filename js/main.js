@@ -94,3 +94,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
   
   });
+
+
+/* formulario de consumo */
+
+
+document.getElementById('productForm').addEventListener('submit', function(event) {
+	event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+
+	let formData = new FormData(this);
+
+	fetch('process.php', {
+		method: 'POST',
+		body: formData
+	})
+	.then(response => response.text())
+	.then(data => {
+		let result = document.getElementById('result');
+		result.classList.remove('is-hidden');
+		result.classList.add('is-info');
+		result.innerHTML = data;
+	})
+	.catch(error => {
+		let result = document.getElementById('result');
+		result.classList.remove('is-hidden');
+		result.classList.add('is-danger');
+		result.innerHTML = 'Error: ' + error;
+	});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('registrarBtn').addEventListener('click', function(event) {
+		if (!confirm('¿Estás seguro de que deseas registrar este movimiento?')) {
+			event.preventDefault(); // Evita que se envíe el formulario si el usuario cancela
+		}
+	});
+});

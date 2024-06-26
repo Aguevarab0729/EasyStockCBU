@@ -54,7 +54,7 @@
 						<br>
 						Usuario: Cualquier combinación de letras (mayúsculas y minúsculas) y dígitos, con una longitud de entre 4 y 20 caracteres 
 						<br>
-						contraseña:	Cualquier combinación de letras (mayúsculas y minúsculas), números y los caracteres especiales $, @, . y -
+						contraseña:	Minimo 7 carácteres - Cualquier combinación de letras (mayúsculas y minúsculas), números y los caracteres especiales $, @, . y -
 		            </div>
 				</p>
 				<br>
