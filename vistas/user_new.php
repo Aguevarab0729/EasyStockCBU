@@ -46,6 +46,21 @@
 						</div>
 					</div>
 				</div>
+				<!-- <div class="columns">
+                    <div class="column">
+                        <div class="control">
+                            <label>Rol : </label>
+                            <div class="select">
+                                <select name="usuario_rol" required>
+                                    <option value="" selected disabled>Selecciona un rol</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Usuario Normal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
 				<p>
 					<div class="notification is-info is-light">
 						( * )  Este formulario permite: 

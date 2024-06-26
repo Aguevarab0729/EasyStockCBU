@@ -23,7 +23,7 @@
                 <h2 class="subtitle">Lista de Movimientos</h2>
             </div>
             <div class="column">
-                <a href="" class="button is-primary" style="float: right;">
+                <a href="index.php?vista=movement_new" class="button is-primary" style="float: right;">
                     <span class="icon-text">
                         <span class="icon">
                             <i class="fas fa-folder-plus"></i>
